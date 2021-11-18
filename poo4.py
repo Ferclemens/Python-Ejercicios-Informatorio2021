@@ -3,6 +3,7 @@ class Agenda():
         self.lista_contactos = []
     
     def menu(self):
+        print("_____________AGENDA PERSONAL_____________")
         print("______________MENU AGENDA______________\n")
         print("Seleccione con 1-2-3-4-5-6 la acción requerida:\n")
         print("1 - Agregar Contacto.\n2 - Buscar Contacto.\n3 - Editar Contacto.\n4 - Eliminar Contacto.\n5 - Listar agenda completa\n6 - Cerrar Agenda.")
@@ -63,7 +64,6 @@ class Agenda():
         print(f"{self.lista_contactos[id-1].__str__()}")
         self.lista_contactos.pop(id-1)
         print(f"CONTACTO ELIMINADO CON EXITO")
-        print(f"{self.lista_contactos.__str__()}")
         self.menu()
 
     def __str__(self):
@@ -72,7 +72,8 @@ class Agenda():
             print(a)
 
     def salir(self):
-        print("gracias por usar AGENDA SYSTEM 3000")
+        print("SALIDO CON EXITO aaaaaah!")
+        exit()
         
         
 
@@ -84,9 +85,8 @@ class Contacto():
         self.mail = mail
 
     def __str__(self):
-        return f"ID: {self.id}\nNombre: {self.nombre}\nTeléfono: {self.telefono}\nMail: {self.mail}\n----------"
+        return f"ID: {self.id}\nNombre: {self.nombre}\nTeléfono: {self.telefono}\nMail: {self.mail}\n--------------"
 
-print("_____________AGENDA PERSONAL_____________")
 
 agenda1 = Agenda()
 agenda1.menu()
